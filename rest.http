@@ -1,0 +1,34 @@
+@baseUrl=http://localhost:3000
+
+### @name GetAll
+GET {{baseUrl}}/movies
+Content-Type: application/json
+
+### @name GetOne
+GET {{baseUrl}}/movies/2
+Content-Type: application/json
+
+### @name CreateOne
+POST {{baseUrl}}/movies/create
+Content-Type: application/json
+
+{
+    "title": "wow",
+    "year": 2020,
+    "genres": ["text"]
+}
+
+### @name DeleteOne
+DELETE {{baseUrl}}/movies/delete/1
+Content-Type: application/json
+
+### @name UpdateOne
+PATCH {{baseUrl}}/movies/update/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "title": "wow",
+    "year": 2020,
+    "genres": ["text","test"]
+}
